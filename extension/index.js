@@ -24,7 +24,7 @@ module.exports = function(nodecg) {
 				users.value[req.body.group_id] = {};
 
 			// Put tag data in, key'd by the position.
-			users.value[req.body.group_id][req.body.tag_data.position] = req.body.tag_data;
+			users.value[req.body.group_id][req.body.position] = req.body.tag_data;
 
 			// Also send the request in a message.
 			nodecg.sendMessage('login', req.body);
@@ -34,8 +34,8 @@ module.exports = function(nodecg) {
 
 		// Request to clear the relevant data from our storage.
 		else if (req.body.action === 'clear') {
-			// Just recreate the group's object.
-			users.value[req.body.group_id] = {};
+			// Completely deletes the group's object.
+			delete users.value[req.body.group_id];
 
 			// Also send the request in a message.
 			nodecg.sendMessage('clear', req.body);

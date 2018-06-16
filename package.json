@@ -13,6 +13,15 @@
   },
   "homepage": "https://github.com/speedcontrol/speedcontrol-flagcarrier#readme",
   "nodecg": {
-    "compatibleRange": "~0.9.0"
+    "compatibleRange": "~0.9.0",
+    "dashboardPanels": [
+      {
+        "name": "users",
+        "title": "Flag Carrier - Logged In Users",
+        "width": 3,
+        "file": "users.html",
+        "headerColor": "#008BB9"
+      }
+    ]
   }
 }
