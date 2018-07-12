@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/speedcontrol/speedcontrol-flagcarrier#readme",
   "nodecg": {
-    "compatibleRange": "~0.9.0",
+    "compatibleRange": "^1.0.0",
     "dashboardPanels": [
       {
         "name": "users",
