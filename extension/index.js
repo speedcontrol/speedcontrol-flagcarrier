@@ -30,7 +30,9 @@ module.exports = function(nodecg) {
 			nodecg.sendMessage('clear', req.body);
 
 			nodecg.log.info('The %s group was cleared using FlagCarrier app (DeviceID: %s).', req.body.group_id, req.body.device_id);
-			res.send('All users from this group have been cleared.');
+
+			if (req.body.action !== 'login_clear')
+				res.send('All users from this group have been cleared.');
 		}
 
 		// Store the data in our storage.
